@@ -6,7 +6,7 @@ import classes from './Discovery.module.css';
 
 class Discovery extends Component {
     // TODO change to localzeroconf
-    baseUrl = 'http://localhost:15051/a1/xploretv/v1/zeroconf';
+    baseUrl = 'http://localzeroconf:15051/a1/xploretv/v1/zeroconf';
     serviceName = 'TV Dashboard';
     state = {error: {code: 'Unknown', msg: 'Error', reason: 'Failed to fetch'}};
     loaded = 0;
