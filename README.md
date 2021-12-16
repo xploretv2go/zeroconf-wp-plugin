@@ -12,3 +12,4 @@ For installation download the /build folder and place it in your WP installation
 
 ## Troubleshooting
 - in case of running into issues with CORS for private networks on Chromium/Chrome browsers make sure to go to your browser settings and disable the following setting. `chrome://flags/#block-insecure-private-network-requests` 
+- More information on this issue and why it is happening can be found under https://developer.chrome.com/blog/private-network-access-update/
