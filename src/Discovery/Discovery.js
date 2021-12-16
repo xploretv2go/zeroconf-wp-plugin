@@ -5,7 +5,6 @@ import { Focusable, FocusableSection } from 'react-js-spatial-navigation';
 import classes from './Discovery.module.css';
 
 class Discovery extends Component {
-    // TODO change to localzeroconf
     baseUrl = 'http://localzeroconf:15051/a1/xploretv/v1/zeroconf';
     serviceName = 'TV Dashboard';
     state = {error: {code: 'Unknown', msg: 'Error', reason: 'Failed to fetch'}};
@@ -34,7 +33,9 @@ class Discovery extends Component {
     }
 
     requestServices(){
-            fetch(this.baseUrl)
+            fetch(this.baseUrl, {
+                headers: { 'Content-Type': 'application/json' },
+            })
             .then(async res => {
                 const resp = await res.json();
                 if (!res.ok){
@@ -59,7 +60,7 @@ class Discovery extends Component {
                     serviceProtocol: 'any',
                     service: {
                         type: '_http._tcp',
-                        port: parseInt(window.location.port),
+                        port: 80,
                         txtRecord: {
                             version: '1.0',
                             provider: 'A1 Telekom Austria Group',
@@ -175,11 +176,9 @@ class Discovery extends Component {
     getButton(service){
         if (service['type'].includes('http')){
             return(service['ipv4'].map((ip, idx) => {
-                const urltest = this.getLink(service, ip)
-
                 return(
                     <div className={classes.BtnWrap} key={'open_btn-' + idx}>
-                        <Focusable className={classes.Btn} onClick={() => {window.location.href = urltest}}>
+                        <Focusable className={classes.Btn} onClickEnter={() => {window.open(this.getLink(service, ip), '_blank')}}>
                             {service['ipv4'].length > 1 ? 'Open (' + idx +')': 'Open'}
                         </Focusable>
                     </div>
@@ -266,7 +265,7 @@ class Discovery extends Component {
                 )
             } else {
                 return(
-                <div>
+                <div className={classes.Background}>
                 <h1 className={classes.Title}>Service Discovery</h1>
                 <div className={classes.ServiceWrap}>
                     <FocusableSection sectionId='main-service'
