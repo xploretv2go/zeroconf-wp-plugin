@@ -9,3 +9,6 @@ For installation download the /build folder and place it in your WP installation
 ## Development
 - To run a dev server run `yarn start`
 - To build the project and create a new build file based on development changes run `yarn build`
+
+## Troubleshooting
+- in case of running into issues with CORS for private networks on Chromium/Chrome browsers make sure to go to your browser settings and disable the following setting. `chrome://flags/#block-insecure-private-network-requests` 
