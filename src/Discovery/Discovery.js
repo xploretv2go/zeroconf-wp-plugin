@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react';
-import Control from './../shared/Control';
 import { Focusable, FocusableSection } from 'react-js-spatial-navigation';
 import classes from './Discovery.module.css';
 
