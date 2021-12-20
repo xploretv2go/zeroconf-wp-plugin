@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/css/main.fdb25171.chunk.css",
-    "main.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/main.6641d549.chunk.js",
-    "main.js.map": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/main.6641d549.chunk.js.map",
+    "main.css": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/css/main.6f1c2e1d.chunk.css",
+    "main.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/main.461089d4.chunk.js",
+    "main.js.map": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/main.461089d4.chunk.js.map",
     "runtime-main.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/runtime-main.0b1b1bcf.js",
     "runtime-main.js.map": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/runtime-main.0b1b1bcf.js.map",
     "static/js/2.855e7a79.chunk.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/2.855e7a79.chunk.js",
     "static/js/2.855e7a79.chunk.js.map": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/2.855e7a79.chunk.js.map",
     "index.html": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/index.html",
-    "precache-manifest.487ea38a5ea93d7d2b0b435998422b6c.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/precache-manifest.487ea38a5ea93d7d2b0b435998422b6c.js",
+    "precache-manifest.63488b3a251f1af75a12460ab36a0a3e.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/precache-manifest.63488b3a251f1af75a12460ab36a0a3e.js",
     "service-worker.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/service-worker.js",
-    "static/css/main.fdb25171.chunk.css.map": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/css/main.fdb25171.chunk.css.map",
+    "static/css/main.6f1c2e1d.chunk.css.map": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/css/main.6f1c2e1d.chunk.css.map",
     "static/js/2.855e7a79.chunk.js.LICENSE.txt": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/2.855e7a79.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0b1b1bcf.js",
     "static/js/2.855e7a79.chunk.js",
-    "static/css/main.fdb25171.chunk.css",
-    "static/js/main.6641d549.chunk.js"
+    "static/css/main.6f1c2e1d.chunk.css",
+    "static/js/main.461089d4.chunk.js"
   ]
 }
