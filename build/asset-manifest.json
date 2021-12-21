@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/css/main.2b2a766c.chunk.css",
-    "main.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/main.63a3400b.chunk.js",
-    "main.js.map": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/main.63a3400b.chunk.js.map",
+    "main.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/main.1cf2c62e.chunk.js",
+    "main.js.map": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/main.1cf2c62e.chunk.js.map",
     "runtime-main.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/runtime-main.0b1b1bcf.js",
     "runtime-main.js.map": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/runtime-main.0b1b1bcf.js.map",
     "static/js/2.855e7a79.chunk.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/2.855e7a79.chunk.js",
     "static/js/2.855e7a79.chunk.js.map": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/2.855e7a79.chunk.js.map",
     "index.html": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/index.html",
-    "precache-manifest.2ee1ce1c29e64a84a96db3cdd21cda10.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/precache-manifest.2ee1ce1c29e64a84a96db3cdd21cda10.js",
+    "precache-manifest.b9c59d0165387c043d79c6da00ec0314.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/precache-manifest.b9c59d0165387c043d79c6da00ec0314.js",
     "service-worker.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/service-worker.js",
     "static/css/main.2b2a766c.chunk.css.map": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/css/main.2b2a766c.chunk.css.map",
     "static/js/2.855e7a79.chunk.js.LICENSE.txt": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/2.855e7a79.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0b1b1bcf.js",
     "static/js/2.855e7a79.chunk.js",
     "static/css/main.2b2a766c.chunk.css",
-    "static/js/main.63a3400b.chunk.js"
+    "static/js/main.1cf2c62e.chunk.js"
   ]
 }
