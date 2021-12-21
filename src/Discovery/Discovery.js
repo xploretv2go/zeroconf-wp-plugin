@@ -30,7 +30,7 @@ const Icon = () => (
   );
 
 class Discovery extends Component {
-    baseUrl = 'http://localzeroconf:15051/a1/xploretv/v1/zeroconf';
+    baseUrl = 'http://zeroconf:15051/a1/xploretv/v1/zeroconf';
     serviceName = 'TV Dashboard';
     state = {error: {code: 'Unknown', msg: 'Error', reason: 'Failed to fetch'}};
     loaded = 0;
