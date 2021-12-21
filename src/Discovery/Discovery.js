@@ -4,7 +4,7 @@ import { Focusable, FocusableSection } from 'react-js-spatial-navigation';
 import classes from './Discovery.module.css';
 
 const Icon = () => (
-    <svg width="100%" height="100%" viewBox="0 0 187 235" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" style={{fillRule:"evenodd",clipRule:"evenodd",strokeLinejoin:"round",strokeMiterlimit:"2"}}>
+    <svg width="90%" height="90%" viewBox="0 0 187 235" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" style={{fillRule:"evenodd",clipRule:"evenodd",strokeLinejoin:"round",strokeMiterlimit:"2"}}>
     <g id="Page-1" opacity="0.2">
         <g transform="matrix(1,0,0,1,-2,0)">
             <g id="Error1">
@@ -277,7 +277,6 @@ class Discovery extends Component {
                                 <FocusableSection sectionId='main-service'
                                         className={classes.ErrorWrap}>
                                     <div className={classes.ErrorItem}>
-                                        {/* <img style={{width: '100%'}} src={process.env.PUBLIC_URL + '/ws_error.svg'} alt="Error"/> */}                                      
                                         <Icon/>
                                     </div>
                                     <div className={classes.ErrorItem}><strong>Ups, da ist etwas schief gelaufen.</strong> Wahrscheinlich fehlt das Zeroconfiguration Networking Service. Bitte wenden Sie sich an den Gerätehersteller oder an Ihren Dienstanbieter.</div>
@@ -295,7 +294,7 @@ class Discovery extends Component {
                 <h1 className={classes.Title}>Service Discovery</h1>
                 <div className={classes.ServiceWrap}>
                     <FocusableSection sectionId='main-service'
-                        neighborUp=''
+                        neighborUp='@section_header'
                         neighborDown=''
                         neighborRight='@detail-services'
                         className={classes.LeftPanel}>
@@ -305,7 +304,7 @@ class Discovery extends Component {
                             </div>
                     </FocusableSection>
                     <FocusableSection sectionId='detail-services'
-                        neighborUp=''
+                        neighborUp='@section_header'
                         neighborDown=''
                         neighborLeft='@main-service'
                         neighborRight='@detail-service'
