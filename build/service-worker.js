@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/precache-manifest.0b0672f7c2bb8fa202ff5d271a182e01.js"
+  "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/precache-manifest.736b3c136181aa6c42ed6955db0bcfb9.js"
 );
 
 self.addEventListener('message', (event) => {
