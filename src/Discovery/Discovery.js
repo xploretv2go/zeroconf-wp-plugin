@@ -269,8 +269,10 @@ class Discovery extends Component {
         }
     }
     getMenu() {
-
-            if (this.state.error !== false){
+            if (this.state.error.code !== "Unknown" && !this.state.hasOwnProperty("services")) {
+                return(<div>loading</div>);
+            }
+            else if (this.state.error !== false && !this.state.hasOwnProperty("services")){
                 return(
                         <div className={'modal-menu'} ref={this.props.modalRef}>
                             <div className={classes.ServiceWrap}>
@@ -288,7 +290,8 @@ class Discovery extends Component {
                             </div>
                         </div>
                 )
-            } else {
+            }  
+            else {
                 return(
                 <div className={classes.Background}>
                 <h1 className={classes.Title}>Service Discovery</h1>
