@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "05ca165a1bacb15660a9b0488b52d276",
+    "revision": "983fd16ca5420e3b71970b9921d3c9bb",
     "url": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/index.html"
   },
   {
-    "revision": "457416c7cdf5117168ea",
-    "url": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/css/main.9543e61a.chunk.css"
+    "revision": "ec578e7f058182369926",
+    "url": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/css/main.1e689409.chunk.css"
   },
   {
     "revision": "e325649a5499d689c202",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/2.855e7a79.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "457416c7cdf5117168ea",
-    "url": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/main.9814e5fc.chunk.js"
+    "revision": "ec578e7f058182369926",
+    "url": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/main.df3c1add.chunk.js"
   },
   {
     "revision": "7a3d5d14d81da307fb08",

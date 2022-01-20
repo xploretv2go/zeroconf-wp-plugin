@@ -29,11 +29,28 @@ const Icon = () => (
 </svg> 
   );
 
+  const Loader = () => (
+    <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 100 100" enable-background="new 0 0 0 0" xmlSpace="preserve">
+            <path fill="#505a67" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+            <animateTransform 
+                attributeName="transform" 
+                attributeType="XML" 
+                type="rotate"
+                dur="1s" 
+                from="0 50 50"
+                to="360 50 50" 
+                repeatCount="indefinite" />
+  </path>
+</svg>
+  );
+
 class Discovery extends Component {
     baseUrl = 'http://zeroconf:15051/a1/xploretv/v1/zeroconf';
     serviceName = 'TV Dashboard';
     state = {error: {code: 'Unknown', msg: 'Error', reason: 'Failed to fetch'}};
     loaded = 0;
+    loading = true;
     mainItems = [{key: 'ipv4', name: 'IPv4'}, {key: 'ipv6', name: 'IPv6'}, {key: 'port', name: 'Port'}, {key: 'name', name: 'Name'}, { key: 'domain', name: 'Domain'},
                  { key: 'host', name: 'Host'}, {key: 'type', name: 'Service Type'}, { key: 'subtype', name: 'Service Subtype'}]
     showRight = false;
@@ -64,10 +81,14 @@ class Discovery extends Component {
             .then(async res => {
                 const resp = await res.json();
                 if (!res.ok){
+                    console.log('here');
+                    this.loading = false;
                     return this.setState({ error: { code: resp.code, msg: resp.message, reason: resp.reason, host: process.env.REACT_APP_DISCOVERY_URL } });
                 }
+                this.loading = false;
                 return this.parseData(resp.services);
             }).catch(error => {
+                this.loading = false;
                 return this.setState({error: {code: 'Unknown', msg: 'Error', reason: error.message, host: process.env.REACT_APP_DISCOVERY_URL}});
             });
     }
@@ -99,18 +120,19 @@ class Discovery extends Component {
             .then(response => response.json())
             .then(response => {
                 if (response.code !== 201 && response.code !== 409){
+                    this.loading = false;
                     return this.setState({error: {code: response.code, msg: response.message, reason: response.reason, host: this.baseUrl}});
                 }
+                this.loading = false;
                 this.requestServices();
             })
             .catch(error => {
+                this.loading = false;
                 return this.setState({error: {code: 'Unknown', msg: 'Error', reason: error.message, host: this.baseUrl}});
             })
         } else {
             this.requestServices();
         }
-
-
     }
 
     componentDidMount(){
@@ -233,7 +255,7 @@ class Discovery extends Component {
             const service = this.state.services[Object.keys(this.state.services)[this.state.selIdx]][index];
             return(
                 <FocusableSection sectionId='detail-service'
-                    neighborUp=''
+                    neighborUp='@section_header'
                     neighborDown=''
                     neighborLeft='@detail-services'
                     neighborRight=''
@@ -269,14 +291,23 @@ class Discovery extends Component {
         }
     }
     getMenu() {
-            if (this.state.error.code !== "Unknown" && !this.state.hasOwnProperty("services")) {
-                return(<div>loading</div>);
+            if (this.loading === true) {
+                return(<div className={classes.Loading}>
+                        <div>
+                            <div className={classes.ServiceWrap}>
+                                    <div className={classes.ErrorItem}>
+                                        Loading
+                                        <Loader/>
+                                    </div>  
+                            </div>
+                        </div>
+                </div>);
             }
-            else if (this.state.error !== false && !this.state.hasOwnProperty("services")){
+            else if (this.state.error !== false && this.loading === false){
                 return(
                         <div className={'modal-menu'} ref={this.props.modalRef}>
                             <div className={classes.ServiceWrap}>
-                                <FocusableSection sectionId='main-service'
+                                <FocusableSection
                                         className={classes.ErrorWrap}>
                                     <div className={classes.ErrorItem}>
                                         <Icon/>
@@ -301,7 +332,7 @@ class Discovery extends Component {
                         neighborDown=''
                         neighborRight='@detail-services'
                         className={classes.LeftPanel}>
-                            <div className={classes.Frame}>
+                            <div className={classes.Frame}  id='main-service'>
                                 <p className={classes.Address + ' ' + classes.TextCenter}>Hosts</p>
                                 {this.getNodes()}
                             </div>

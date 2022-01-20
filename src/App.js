@@ -12,11 +12,10 @@ function App() {
     }
   }
   return (
-    <div className="App">
-      <SpatialNavigation className="App">
+      <SpatialNavigation
+       className="App">
         <Discovery hideMenu={hideMenuHandler}/>
       </SpatialNavigation>
-    </div>
   );
 }
 
