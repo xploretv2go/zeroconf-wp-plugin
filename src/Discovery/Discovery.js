@@ -55,6 +55,13 @@ class Discovery extends Component {
                  { key: 'host', name: 'Host'}, {key: 'type', name: 'Service Type'}, { key: 'subtype', name: 'Service Subtype'}]
     showRight = false;
 
+    componentDidMount() {
+        window.addEventListener('beforeunload', () => {
+            this.deleteService();
+            //console.log('Unregistering service');
+        })
+    }
+
 
     parseData(data){
         const services = {};
@@ -81,7 +88,6 @@ class Discovery extends Component {
             .then(async res => {
                 const resp = await res.json();
                 if (!res.ok){
-                    console.log('here');
                     this.loading = false;
                     return this.setState({ error: { code: resp.code, msg: resp.message, reason: resp.reason, host: process.env.REACT_APP_DISCOVERY_URL } });
                 }
@@ -91,6 +97,10 @@ class Discovery extends Component {
                 this.loading = false;
                 return this.setState({error: {code: 'Unknown', msg: 'Error', reason: error.message, host: process.env.REACT_APP_DISCOVERY_URL}});
             });
+    }
+
+    deleteService(){
+        navigator.sendBeacon( this.baseUrl + '/' + this.serviceName);
     }
 
     loadData() {
