@@ -121,6 +121,7 @@ class Discovery extends Component {
                             version: '1.0',
                             provider: 'A1 Telekom Austria Group',
                             product: 'A1 Service Discovery',
+                            virtualHost: 'true',
                             path:  window.location.protocol + '//' + window.location.hostname + ':' + window.location.port,
                         }
                     }
