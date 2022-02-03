@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "08953db73b94d497f6d7e56d46d79a83",
+    "revision": "ad5b4181290bf0d8c6e6df887ef3674a",
     "url": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/index.html"
   },
   {
-    "revision": "a41bc47e9662a64552bc",
+    "revision": "ec0c14d228b8a0a3fa6d",
     "url": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/css/main.dd5af912.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/2.855e7a79.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a41bc47e9662a64552bc",
-    "url": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/main.6bbcbcd9.chunk.js"
+    "revision": "ec0c14d228b8a0a3fa6d",
+    "url": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/main.761c5b80.chunk.js"
   },
   {
     "revision": "7a3d5d14d81da307fb08",
