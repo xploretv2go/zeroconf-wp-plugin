@@ -46,7 +46,7 @@ const Icon = () => (
   );
 
 class Discovery extends Component {
-    baseUrl = 'http://zeroconf:15051/a1/xploretv/v1/zeroconf';
+    baseUrl = process.env.REACT_APP_DISCOVERY_URL;
     serviceName = 'TV Dashboard';
     state = {error: {code: 'Unknown', msg: 'Error', reason: 'Failed to fetch'}};
     loaded = 0;
@@ -54,8 +54,13 @@ class Discovery extends Component {
     mainItems = [{key: 'ipv4', name: 'IPv4'}, {key: 'ipv6', name: 'IPv6'}, {key: 'port', name: 'Port'}, {key: 'name', name: 'Name'}, { key: 'domain', name: 'Domain'},
                  { key: 'host', name: 'Host'}, {key: 'type', name: 'Service Type'}, { key: 'subtype', name: 'Service Subtype'}]
     showRight = false;
+    initialized = false;
 
     componentDidMount() {
+
+        this.loadData();
+        this.loaded = Date.now();
+
         window.addEventListener('beforeunload', () => {
             this.deleteService();
             //console.log('Unregistering service');
@@ -116,13 +121,13 @@ class Discovery extends Component {
                     serviceProtocol: 'any',
                     service: {
                         type: '_http._tcp',
-                        port: 80,
+                        port: 443,
                         txtRecord: {
                             version: '1.0',
                             provider: 'A1 Telekom Austria Group',
                             product: 'A1 Service Discovery',
                             virtualHost: 'true',
-                            path:  window.location.protocol + '//' + window.location.hostname + ':' + window.location.port,
+                            path:  window.location.protocol + '//' + window.location.hostname,
                         }
                     }
                 }
@@ -146,10 +151,10 @@ class Discovery extends Component {
         }
     }
 
-    componentDidMount(){
+   /* componentDidMount(){
             this.loadData();
             this.loaded = Date.now();
-        }
+        }*/
 
     changeIdx = (event, idx) => {
         if ('services' in this.state){
@@ -190,6 +195,12 @@ class Discovery extends Component {
             let index = this.state.selIdx;
             if (this.state.selIdx > Object.keys(this.state.services).length) {
                 index = 0;
+            }
+
+            if (this.initialized === false){
+                const evt = new Event("contentReady", {"bubbles":true, "cancelable":false});
+                document.dispatchEvent(evt);
+                this.initialized = true;
             }
 
             const service = this.state.services[Object.keys(this.state.services)[index]];
