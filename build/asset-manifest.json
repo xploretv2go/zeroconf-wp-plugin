@@ -1,5 +1,6 @@
 {
   "files": {
+<<<<<<< HEAD
     "main.css": "/static/css/main.2e4be7b6.chunk.css",
     "main.js": "/static/js/main.66c73b82.chunk.js",
     "main.js.map": "/static/js/main.66c73b82.chunk.js.map",
@@ -12,11 +13,30 @@
     "service-worker.js": "/service-worker.js",
     "static/css/main.2e4be7b6.chunk.css.map": "/static/css/main.2e4be7b6.chunk.css.map",
     "static/js/2.855e7a79.chunk.js.LICENSE.txt": "/static/js/2.855e7a79.chunk.js.LICENSE.txt"
+=======
+    "main.css": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/css/main.dd5af912.chunk.css",
+    "main.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/main.761c5b80.chunk.js",
+    "main.js.map": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/main.761c5b80.chunk.js.map",
+    "runtime-main.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/runtime-main.0b1b1bcf.js",
+    "runtime-main.js.map": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/runtime-main.0b1b1bcf.js.map",
+    "static/js/2.855e7a79.chunk.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/2.855e7a79.chunk.js",
+    "static/js/2.855e7a79.chunk.js.map": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/2.855e7a79.chunk.js.map",
+    "index.html": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/index.html",
+    "precache-manifest.93962b4f51cbc72ee20a4c0692346339.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/precache-manifest.93962b4f51cbc72ee20a4c0692346339.js",
+    "service-worker.js": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/service-worker.js",
+    "static/css/main.dd5af912.chunk.css.map": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/css/main.dd5af912.chunk.css.map",
+    "static/js/2.855e7a79.chunk.js.LICENSE.txt": "/wordpress/wp-content/reactpress/apps/zeroconf-wp-plugin/build/static/js/2.855e7a79.chunk.js.LICENSE.txt"
+>>>>>>> 12147d75bd6d6db38c87f7fc7cf97ca16a17c925
   },
   "entrypoints": [
     "static/js/runtime-main.eeb0cc49.js",
     "static/js/2.855e7a79.chunk.js",
+<<<<<<< HEAD
     "static/css/main.2e4be7b6.chunk.css",
     "static/js/main.66c73b82.chunk.js"
+=======
+    "static/css/main.dd5af912.chunk.css",
+    "static/js/main.761c5b80.chunk.js"
+>>>>>>> 12147d75bd6d6db38c87f7fc7cf97ca16a17c925
   ]
 }
